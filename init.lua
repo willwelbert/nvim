@@ -1,0 +1,5 @@
+require("options")
+require("plugins")
+require("keymaps")
+require("telescope_config")
+require("lsp_config")
