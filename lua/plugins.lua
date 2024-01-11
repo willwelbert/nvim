@@ -14,15 +14,15 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
- require("git_config");
+ require("lazy/git_config");
 
- require("theme");
- require("misc");
+ require("lazy/theme");
+ require("lazy/misc");
 
- require("treesitter_config");
- 
- require("fuzzy");
- require("harpoon");
+ require("lazy/treesitter_config");
+
+ require("lazy/fuzzy");
+ require("lazy/harpoon");
 
   {
     -- LSP Configuration & plugins
