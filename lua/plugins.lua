@@ -14,42 +14,47 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
- require("lazy/git_config");
+  require("plugins/git_config"),
 
- require("lazy/theme");
- require("lazy/misc");
+  require("plugins/theme"),
+  require("plugins/misc"),
 
- require("lazy/treesitter_config");
+  require("plugins/treesitter_config"),
 
- require("lazy/fuzzy");
- require("lazy/harpoon");
+  require("plugins/fuzzy"),
+  require("plugins/harpoon"),
+
+  require("plugins/none-ls"),
 
   {
     -- LSP Configuration & plugins
-    'neovim/nvim-lspconfig',
+    "neovim/nvim-lspconfig",
     dependencies = {
-      { 'williamboman/mason.nvim', config = true },
-      'williamboman/mason-lspconfig.nvim',
+      { "williamboman/mason.nvim", config = true },
+      "williamboman/mason-lspconfig.nvim",
 
       -- Status updates for LSP
-      { 'j-hui/fidget.nvim', opts = {} },
+      { "j-hui/fidget.nvim",       opts = {} },
 
-      'folke/neodev.nvim',
+      "folke/neodev.nvim",
     },
   },
   {
     -- Auto complete
-    'hrsh7th/nvim-cmp',
+    "hrsh7th/nvim-cmp",
     dependencies = {
-      'L3MON4D3/LuaSnip',
-      'saadparwaiz1/cmp_luasnip',
+      "L3MON4D3/LuaSnip",
+      "saadparwaiz1/cmp_luasnip",
 
       -- Adds LSP completion capabilities
-      'hrsh7th/cmp-nvim-lsp',
-      'hrsh7th/cmp-path',
+      "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-path",
 
       -- Adds a number of user-friendly snippets
-      'rafamadriz/friendly-snippets',
+      "rafamadriz/friendly-snippets",
     },
+  },
+  {
+    "github/copilot.vim",
   },
 })
