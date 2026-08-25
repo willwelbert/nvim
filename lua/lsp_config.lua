@@ -71,6 +71,7 @@ local servers = {
       diagnostics = { disable = { 'missing-fields' } },
     },
   },
+  gopls = {},
 }
 
 -- nvim-cmp additional completion capabilities, broadcast that to servers

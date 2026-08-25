@@ -12,6 +12,7 @@ return {
           javascriptreact = { "prettierd" },
           typescriptreact = { "prettierd" },
           json = { "prettierd" },
+          go = { "goimports" },
         },
       })
 
@@ -30,6 +31,7 @@ return {
         typescript = { "eslint_d" },
         javascriptreact = { "eslint_d" },
         typescriptreact = { "eslint_d" },
+        go = { "golangcilint" },
       }
 
       vim.api.nvim_create_autocmd({ "BufWritePost", "InsertLeave" }, {
