@@ -1,6 +1,6 @@
 -- installs plugin manager - lazy
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
+if not vim.uv.fs_stat(lazypath) then
   vim.fn.system({
     "git",
     "clone",
@@ -24,7 +24,7 @@ require("lazy").setup({
   require("plugins/fuzzy"),
   require("plugins/harpoon"),
 
-  require("plugins/none-ls"),
+  require("plugins/formatting"),
 
   {
     -- LSP Configuration & plugins
@@ -36,7 +36,7 @@ require("lazy").setup({
       -- Status updates for LSP
       { "j-hui/fidget.nvim",       opts = {} },
 
-      "folke/neodev.nvim",
+      { "folke/lazydev.nvim", ft = "lua", opts = {} },
     },
   },
   {

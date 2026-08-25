@@ -3,7 +3,7 @@ return {
     -- Status bar
     'nvim-lualine/lualine.nvim',
     opts = {
-      theme = 'onedark',
+      theme = 'kanagawa',
       component_separators = "|",
       section_separators = "",
     },
