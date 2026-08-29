@@ -26,6 +26,9 @@ require("lazy").setup({
 
   require("plugins/formatting"),
 
+  require("plugins/dap"),
+  require("plugins/rust"),
+
   {
     -- LSP Configuration & plugins
     "neovim/nvim-lspconfig",
