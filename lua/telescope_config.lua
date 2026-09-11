@@ -1,6 +1,7 @@
 -- Configure Telescope
 require('telescope').setup {
   defaults = {
+    file_ignore_patterns = { 'node_modules', '%.git/' },
     mappings = {
       i = {
         ['<C-u>'] = false,
@@ -76,6 +77,9 @@ vim.keymap.set('n', '<leader>s/', telescope_live_grep_open_files, { desc = '[S]e
 vim.keymap.set('n', '<leader>ss', builtin.builtin, { desc = '[S]earch [S]elected telescope' })
 vim.keymap.set('n', '<leader>gf', builtin.git_files, { desc = 'Search in [G]it [F]iles' })
 vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = '[S]earch [F]iles' })
+vim.keymap.set('n', '<leader>sa', function()
+  builtin.find_files { hidden = true, no_ignore = true }
+end, { desc = '[S]earch [A]ll files (incl. hidden/gitignored)' })
 vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
 vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = '[S]earch current [W]ord' })
 vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = '[S]earch by [G]rep' })
