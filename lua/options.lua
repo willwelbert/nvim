@@ -7,7 +7,8 @@ vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.inccommand = "split"
 
-vim.opt.wrap = false
+vim.opt.wrap = true
+vim.opt.linebreak = true
 vim.opt.expandtab = true
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2

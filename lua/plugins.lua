@@ -25,6 +25,7 @@ require("lazy").setup({
   require("plugins/harpoon"),
 
   require("plugins/formatting"),
+  require("plugins/surround"),
 
   require("plugins/dap"),
   require("plugins/rust"),

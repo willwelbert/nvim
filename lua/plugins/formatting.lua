@@ -12,6 +12,7 @@ return {
           javascriptreact = { "prettierd" },
           typescriptreact = { "prettierd" },
           json = { "prettierd" },
+          html = { "prettierd" },
           go = { "goimports" },
         },
       })
