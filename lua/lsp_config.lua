@@ -34,6 +34,7 @@ local servers = {
     },
   },
   gopls = {},
+  svelte = {},
 }
 
 -- Shared client config applied to every LSP server, plus per-server settings

@@ -12,6 +12,7 @@ return {
           javascriptreact = { "prettierd" },
           typescriptreact = { "prettierd" },
           json = { "prettierd" },
+          svelte = { "prettierd" },
           html = { "prettierd" },
           go = { "goimports" },
         },
@@ -32,6 +33,7 @@ return {
         typescript = { "eslint_d" },
         javascriptreact = { "eslint_d" },
         typescriptreact = { "eslint_d" },
+        svelte = { "eslint_d" },
         go = { "golangcilint" },
       }
 
