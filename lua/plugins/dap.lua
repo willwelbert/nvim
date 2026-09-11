@@ -4,13 +4,15 @@ return {
     dependencies = {
       "rcarriga/nvim-dap-ui",
       "nvim-neotest/nvim-nio",
+      "mfussenegger/nvim-dap-python",
       {
         "jay-babu/mason-nvim-dap.nvim",
         dependencies = { "williamboman/mason.nvim" },
         opts = {
           -- install-only: don't let this also configure adapters, since
-          -- rustaceanvim configures its own codelldb adapter
-          ensure_installed = { "codelldb" },
+          -- rustaceanvim configures its own codelldb adapter and
+          -- nvim-dap-python configures its own debugpy adapter
+          ensure_installed = { "codelldb", "debugpy" },
           handlers = {},
         },
       },
@@ -20,6 +22,8 @@ return {
       local dapui = require("dapui")
 
       dapui.setup()
+
+      require("dap-python").setup(vim.fn.stdpath("data") .. "/mason/packages/debugpy/venv/bin/python")
 
       dap.listeners.after.event_initialized["dapui_config"] = function()
         dapui.open()

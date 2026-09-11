@@ -15,6 +15,7 @@ return {
           svelte = { "prettierd" },
           html = { "prettierd" },
           go = { "goimports" },
+          python = { "ruff_organize_imports", "ruff_format" },
         },
       })
 
@@ -35,6 +36,7 @@ return {
         typescriptreact = { "eslint_d" },
         svelte = { "eslint_d" },
         go = { "golangcilint" },
+        python = { "ruff" },
       }
 
       vim.api.nvim_create_autocmd({ "BufWritePost", "InsertLeave" }, {
