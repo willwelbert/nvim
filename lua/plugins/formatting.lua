@@ -17,6 +17,10 @@ return {
           go = { "goimports" },
           python = { "ruff_organize_imports", "ruff_format" },
         },
+        format_on_save = {
+          timeout_ms = 500,
+          lsp_fallback = true,
+        },
       })
 
       vim.keymap.set("n", "<leader>f", function()
